@@ -34,6 +34,10 @@ bgein
 
   UTL_FILE.PUT_LINE(f , 'Content file');
   UTL_FILE.FCLOSE(f);
+exception
+      when OTHERS then
+           DBMS_OUTPUT.PUT_LINE
+                ('ERROR ' || TO_CHAR(SQLCODE) || SQLERRM);
 end;
 /
 exit;
