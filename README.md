@@ -29,7 +29,7 @@ set serveroutput on
 conn user1;
 declare
   f  UTL_FILE.FILE_TYPE;
-bgein
+begin
   f := UTL_FILE.FOPEN('testdir', 'testfile.txt' , 'W');
 
   UTL_FILE.PUT_LINE(f , 'Content file');
